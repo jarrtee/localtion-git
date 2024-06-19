@@ -1,8 +1,9 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <nav style="text-align: left;">
+      | <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/other">Other</router-link> |
     </nav>
     <router-view/>
   </div>
