@@ -1,15 +1,33 @@
 <template>
-    <div class="other">
-    <h1 style="text-align: left;">!!!!0.0</h1>
-    <el-button type="primary">主要按钮</el-button>
-    </div>
-</template>   
+  <div id="main">
+    <nav style="text-align: left;">
+      | <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/other">Other</router-link> |
+    </nav>
+    <router-view/>
+  </div>
+</template>
 
-
-<!-- <style scoped>
-.other {
-  display: grid;
-  grid-template-columns: auto auto; /* 定义两列 */
-  gap: 10px; /* 控制列间距 */
+<style lang="scss">
+#main {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
-</style> -->
+
+nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>
